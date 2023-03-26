@@ -52,7 +52,7 @@ describe('Saving calculator -  Heat Prices calculations test', () => {
 
         cy.get(age).should('be.visible')
         cy.get(age).type(30).click()
-        
+
         cy.get(current_heating).should('be.visible')
         cy.get('[name="heattype"]').select('Electric', { force: true })
         cy.get('[value="Electric"]').should('be.visible')
@@ -69,11 +69,11 @@ describe('Saving calculator -  Heat Prices calculations test', () => {
         cy.get('[name="eheatingtype"]').select('55%', { force: true })
         cy.get('[value="55"]').should('be.visible')
 
-        cy.get('#AHS').verify('not.empty')
-        cy.get('#CHC').verify('not.empty')
-        cy.get('#NHC').verify('not.empty')
+        cy.get('#AHS').should('not.empty')
+        cy.get('#CHC').should('not.empty')
+        cy.get('#NHC').should('not.empty')
 
-
-        
+        cy.get('#VTAS').should('not.empty')
+        cy.get('#VTES').should('not.empty')
     })
 })
