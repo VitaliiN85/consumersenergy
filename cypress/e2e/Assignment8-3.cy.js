@@ -34,6 +34,11 @@ describe('Saving calculator -  Heat Prices calculations test', () => {
         cy.log("after each")
     })
     it('Populate all the fields at step 1 with the test data of your choice', () => {
+        cy.get('[name="gastherm"]').clear().type('2{enter}')
+        cy.get('[name="propaneGas"]').clear().type('3{enter}')
+        cy.get('[name="oilgal"]').clear().type('4{enter}')
+        cy.get('[name="skwhr"]').clear().type('5{enter}')
+        cy.get('[name="wkwhr"]').clear().type('6{enter}')
 
         cy.get(select_state).should('be.visible')
         cy.get(select_state).select('Alberta', { force: true })
