@@ -56,7 +56,7 @@ describe('Saving calculator -  Heat Prices calculations test', () => {
         cy.get('[value="1000"]').should('be.visible')
 
         cy.get(age).should('be.visible')
-        cy.get(age).type(30).click()
+        cy.get(age).type(30)//.click()
 
         cy.get(current_heating).should('be.visible')
         cy.get('[name="heattype"]').select('Electric', { force: true })
